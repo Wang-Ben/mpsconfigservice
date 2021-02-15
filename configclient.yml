@@ -1,0 +1,9 @@
+spring.application.name=configclient
+spring.cloud.consul.host=localhost
+spring.cloud.consul.port=8500
+#spring.cloud.consul.discovery.register-health-check=false	    #关闭consu了服务的健康检查[不推荐]
+spring.cloud.consul.discovery.service-name=${spring.application.name}
+
+#这两个属性必须是搭配使用，consul按ip注册
+spring.cloud.consul.discovery.prefer-ip-address=true
+spring.cloud.consul.discovery.ip-address=localhost
